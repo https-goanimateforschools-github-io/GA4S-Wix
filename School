@@ -1,0 +1,438 @@
+<html lang="en"><script type="text/javascript" async="" src="https://web.archive.org/web/20190302024906/https://www.gstatic.com/recaptcha/api2/v1550471573786/recaptcha__en.js"></script><script type="text/javascript" class="__REQUESTLY__SCRIPT">(function(namespace) {
+  window[namespace] = window[namespace] || {};
+  window[namespace].responseRules = {};
+
+  let open = XMLHttpRequest.prototype.open;
+  XMLHttpRequest.prototype.open = function(method) {
+    this.addEventListener('readystatechange', function() {
+      if (this.readyState === 4 && window[namespace].responseRules.hasOwnProperty(this.responseURL)) {
+        const responseRule = window[namespace].responseRules[this.responseURL];
+        const {response, id} = responseRule;
+        const responseType = this.responseType;
+        let customResponse;
+
+        customResponse = response.type === 'code' ? responseRule.evaluator({
+            method,
+            url: this.responseURL,
+            requestHeaders: this.requestHeaders,
+            requestData: this.requestData,
+            responseType: this.responseType,
+            response: this.response
+          }) : response.value;
+
+        Object.defineProperty(this, 'response', {
+          get: function () {
+            if (response.type === 'static' && responseType === 'json') {
+              return JSON.parse(customResponse);
+            }
+            return customResponse;
+          }
+        });
+
+        if (responseType === '' || responseType === 'text') {
+          Object.defineProperty(this, 'responseText', {
+            get: function () {
+              return customResponse;
+            }
+          });
+        }
+
+        window.postMessage({
+          from: 'requestly',
+          type: 'response_rule_applied',
+          id
+        }, window.location.href);
+      }
+    }, false);
+    open.apply(this, arguments);
+  };
+
+  let send = XMLHttpRequest.prototype.send;
+  XMLHttpRequest.prototype.send = function(data) {
+    this.requestData = data;
+    send.apply(this, arguments);
+  };
+
+  let setRequestHeader = XMLHttpRequest.prototype.setRequestHeader;
+  XMLHttpRequest.prototype.setRequestHeader = function(header, value) {
+    this.requestHeaders = this.requestHeaders || {};
+    this.requestHeaders[header] = value;
+    setRequestHeader.apply(this, arguments);
+  }
+})('__REQUESTLY__')</script><head><script src="//archive.org/includes/analytics.js?v=cf34f82" type="text/javascript"></script>
+<script type="text/javascript">window.addEventListener('DOMContentLoaded',function(){var v=archive_analytics.values;v.service='wb';v.server_name='wwwb-app55.us.archive.org';v.server_ms=510;archive_analytics.send_pageview({});});</script><script type="text/javascript" src="/_static/js/playback.bundle.js?v=bQvHU8mx" charset="utf-8"></script>
+<script type="text/javascript" src="/_static/js/wombat.js?v=cRqOKCOw" charset="utf-8"></script>
+<script type="text/javascript">
+  __wm.init("https://web.archive.org/web");
+  __wm.wombat("https://goanimate4schools.com/school/lw97","20190302024906","https://web.archive.org/","web","/_static/",
+	      "1551494946");
+</script>
+<link rel="stylesheet" type="text/css" href="/_static/css/banner-styles.css?v=wiOP2tld">
+<link rel="stylesheet" type="text/css" href="/_static/css/iconochive.css?v=qtvMKcIJ">
+<!-- End Wayback Rewrite JS Include -->
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<link rel="dns-prefetch" href="//web.archive.org/web/20190302024906/https://d2qrjeyl4jwu9j.cloudfront.net/">
+
+<title>Login to LW97 - GoAnimate for Schools</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta name="description" content="GoAnimate for Schools is a safe environment for students to fully express their creativity through video and a great place for educators to share educational videos with other educators worldwide.">
+
+<meta property="og:site_name" content="GoAnimate for Schools">
+<meta property="fb:app_id" content="122508887813978">
+<meta name="google-site-verification" content="Vta3YTpj6Kx6u4p-EzeMArY0alNItkyUYYMvNM8seVI">
+
+
+<link rel="stylesheet" href="//web.archive.org/web/20190302024906cs_/https://fonts.googleapis.com/css?family=Lato:400,700">
+<link rel="stylesheet" href="https://web.archive.org/web/20190302024906cs_/https://d2qrjeyl4jwu9j.cloudfront.net/static/e60e6efd1cf320eb/school/css/common_combined.css.gz.css">
+
+<link rel="stylesheet" href="https://web.archive.org/web/20190302024906cs_/https://d2qrjeyl4jwu9j.cloudfront.net/static/e60e6efd1cf320eb/school/css/public/login.css.gz.css">
+
+<script>
+var srv_tz_os = -5, view_name = "school", user_cookie_name = "u_info_school";
+var user_country = "US";
+</script>
+
+<!--[if lt IE 9]>
+<script src="https://d2qrjeyl4jwu9j.cloudfront.net/static/e60e6efd1cf320eb/go/js/lib/html5shiv.js.gz.js"></script>
+<![endif]-->
+<script src="https://web.archive.org/web/20190302024906js_/https://d2qrjeyl4jwu9j.cloudfront.net/static/e60e6efd1cf320eb/school/js/common_combined.js.gz.js"></script>
+<script type="text/javascript" src="https://web.archive.org/web/20190302024906js_/https://d2qrjeyl4jwu9j.cloudfront.net/static/e60e6efd1cf320eb/go/po/goserver_js-en_US.json.gz.json"></script>
+<script type="text/javascript">
+var I18N_LANG = 'en_US';
+var GT = new Gettext({'locale_data': json_locale_data});
+</script>
+<script src="https://web.archive.org/web/20190302024906js_/https://goanimate4schools.com/ajax/cookie_policy" async=""></script>
+
+<!-- Google Knowledge Graph -->
+<script type="application/ld+json">
+{
+    "@context": "https://web.archive.org/web/20190302024906/http://schema.org",
+    "@type": "Organization",
+    "name": "GoAnimate",
+    "url": "https://web.archive.org/web/20190302024906/http://goanimate.com",
+    "logo": "https://web.archive.org/web/20190302024906/http://gawpstorage.s3.amazonaws.com/img/google_knowledge_graph_logo.jpg",
+    "sameAs": [
+        "https://web.archive.org/web/20190302024906/http://www.facebook.com/GoAnimateInc",
+        "https://web.archive.org/web/20190302024906/http://twitter.com/GoAnimate",
+        "https://web.archive.org/web/20190302024906/http://www.linkedin.com/company/goanimate",
+        "https://web.archive.org/web/20190302024906/http://plus.google.com/+goanimate",
+        "https://web.archive.org/web/20190302024906/http://www.youtube.com/user/GoAnimate"
+    ]
+}
+</script>
+
+</head>
+<body class="page-action-school"><!-- BEGIN WAYBACK TOOLBAR INSERT -->
+<style type="text/css">
+body {
+  margin-top:0 !important;
+  padding-top:0 !important;
+  /*min-width:800px !important;*/
+}
+</style>
+<script>__wm.rw(0);</script>
+<div id="wm-ipp-base" lang="en" style="display: block; direction: ltr;">
+</div><div id="wm-ipp-print">The Wayback Machine - https://web.archive.org/web/20190302024906/https://goanimate4schools.com/school/lw97</div>
+<div id="donato" style="position:relative;width:100%;">
+  <div id="donato-base">
+    <iframe id="donato-if" src="https://archive.org/includes/donate.php?as_page=1&amp;platform=wb&amp;referer=https%3A//web.archive.org/web/20190302024906/https%3A//goanimate4schools.com/school/lw97" scrolling="no" frameborder="0" style="width:100%; height:100%">
+    </iframe>
+  </div>
+</div><script type="text/javascript">
+__wm.bt(650,27,25,2,"web","https://goanimate4schools.com/school/lw97","20190302024906",1996,"/_static/",["/_static/css/banner-styles.css?v=wiOP2tld","/_static/css/iconochive.css?v=qtvMKcIJ"]);
+  __wm.rw(1);
+</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+<script type="text/javascript">
+if (self !== top) {
+            jQuery('body').hide();
+    }
+</script>
+
+<nav class="navbar site-nav" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+            <a class="navbar-brand" href="/web/20190302024906/https://goanimate4schools.com/" title="GoAnimate for Schools">
+                <img alt="GoAnimate for Schools" src="https://web.archive.org/web/20190302024906im_/https://d2qrjeyl4jwu9j.cloudfront.net/static/e60e6efd1cf320eb/school/img/site/logo4s.png">
+            </a>
+        </div>
+
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="/web/20190302024906/https://goanimate4schools.com/school/lw97">Login</a></li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" href="#" data-toggle="dropdown">Learning Center <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="https://web.archive.org/web/20190302024906/https://blog.goanimate4schools.com/">Blog</a></li>
+                        <li><a href="/web/20190302024906/https://goanimate4schools.com/public_faq">FAQ</a></li>
+                        <li><a href="https://web.archive.org/web/20190302024906/https://goanimate4schools.zendesk.com/hc/en-us">Help Center</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="hero">
+    <div class="hero-bottom">
+        <div class="landscape"></div>
+    </div>
+    <div class="container">
+        <header class="login-header">
+            <img class="school-thumbnail img-circle" src="https://web.archive.org/web/20190302024906im_/https://s3.amazonaws.com/fs.goanimate4schools.com/files/thumbnails/asset/1695/988695/44246458.jpg" alt="">
+            <div class="school-name">LW97</div>
+        </header>
+        <div class="alert alert-warning">
+            <p>On June 30, 2019 support and services will end for GoAnimate for Schools. Thank you for supporting GoAnimate and using the tools our team has worked so hard to create.</p>
+
+            <p>As you look for another service, we would strongly encourage you to find one that is committed to safeguarding the personal information of children. Good questions to ask are:</p>
+            <ul>
+                <li>Are you COPPA compliant?</li>
+                <li>Are you GDPR compliant?</li>
+            </ul>
+
+        </div>
+        <div class="row">
+            <div class="col-sm-8 col-md-6 col-lg-5 login-col">
+                <div class="floating-form">
+                    <div class="floating-form-body">
+                        <form class="login-form" id="login-form" action="/web/20190302024906/https://goanimate4schools.com/ajax/loginUser" method="post" novalidate="">
+                            <div class="form-group">
+                                <div class="text-danger" id="login-form-message"></div>
+                            </div>
+                            <div class="form-group">
+                                <label class="sr-only" for="login-username">Username</label>
+                                <input class="form-control" id="login-username" type="email" name="username" maxlength="255" placeholder="Login Name" value="">
+                            </div>
+                            <div class="form-group">
+                                <label class="sr-only" for="login-password">Password</label>
+                                <input class="form-control" id="login-password" type="password" name="password" maxlength="255" placeholder="Password" value="" autocomplete="off">
+                            </div>
+
+                            <div class="form-group" id="login_captcha_container"></div>
+
+                            <div class="form-group text-center">
+                                <button class="btn btn-green btn-lg" id="btn-login" type="submit">Login</button>
+
+                                <input type="hidden" name="action" value="login">
+
+<input type="hidden" name="ct" value="vwPoNwEU9T1taEJJX1g7qgvWCYww7KS_WDRjyJCrkCK4iMtrlCmiISeDFU2dZJKI6Xc_L8j+zDo3NGCBPnIu4A3EW9N4ap6VQHNpHwLBMkjnL_Un14fX4+xZ_dizGp09FU8e6qJO6rIys0ab79RA4v3eNa0dyG46Jm+u1v60YN4gf6B7oMjuLiSPF8lI7KnocvxvRK8iFQir1KoUR3goBj90CS">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="floating-form-footer">
+                        <h5>Password Help</h5>
+                        <div>Are you a student or teacher? Please contact your Super Teacher.</div>
+                        <div>Are you a Super Teacher? <a href="/web/20190302024906/https://goanimate4schools.com/forgotpassword">Reset it now &gt;</a></div>
+                    </div>
+                    <div class="floating-form-footer text-center">
+                        <a href="/web/20190302024906/https://goanimate4schools.com/googlelogin"><span class="si google"></span> Google Login</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+(function($) {
+var processing = false;
+var captcha_displayed = false;
+
+function validateLogin() {
+    var username = $('#login-username'), username_val = $.trim(username.val()), password = $('#login-password');
+
+    formErrorMessage('');
+
+    if (! username_val) {
+        $('#login-username').focus();
+        formErrorMessage('Please enter login name');
+        return false;
+    }
+
+    if (! password.val()) {
+        $('#login-password').focus();
+        formErrorMessage('Please enter password');
+        return false;
+    }
+
+    if (captcha_displayed && (grecaptcha.getResponse() === '')) {
+        formErrorMessage('Please enter the CAPTCHA value');
+        return false;
+    }
+
+    return true;
+}
+
+function formErrorMessage(message) {
+    $('#login-form-message').text(message);
+}
+
+function submitLogin() {
+    if (! validateLogin()) { return; }
+    if (processing) { return; }
+
+    processing = true;
+
+    var buttonText = $('#btn-login').text();
+    $('#btn-login').text('Logging in...');
+    $.post('/ajax/loginUser', $('#login-form').serialize(), function(response) {
+        if (response.redirect) {
+            window.location = response.redirect;
+        } else if (response.error) {
+            processing = false;
+            formErrorMessage(response.error);
+            $('#btn-login').text(buttonText);
+            // If return throttle, show captcha
+            if (captcha_displayed) {
+                grecaptcha.reset();
+            } else if (response.show_captcha) {
+                showCaptchaWidget();
+            }
+        }
+    }, 'json');
+}
+
+$('#login-form').submit(function() {
+    submitLogin();
+    return false;
+});
+
+function showCaptchaWidget() {
+    grecaptcha.render('login_captcha_container', {"sitekey":"6LcvJjkUAAAAAIlJ2EwBKlDHYcJCykm0xXeew0oG","theme":"light"});
+    captcha_displayed = true;
+}
+window.onRecaptchaLoaded = function() {
+};
+
+if ($('#login-username').val().length) {
+    $('#login-password').focus();
+} else {
+    $('#login-username').focus();
+}
+
+
+})(jQuery);
+</script>
+<script src="https://web.archive.org/web/20190302024906js_/https://www.google.com/recaptcha/api.js?onload=onRecaptchaLoaded&amp;render=explicit" async="" defer=""></script>
+
+<footer class="site-footer hidden-print">
+    <div class="container">
+        <div class="row site-footer-nav">
+            <div class="col-sm-3">
+                <div class="site-footer-nav-col">
+                    <h5>About GoAnimate</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="https://web.archive.org/web/20190302024906/https://goanimate.com/about">Who We Are</a></li>
+                        <li><a href="https://web.archive.org/web/20190302024906/https://goanimate.com/contactus">Contact Us</a></li>
+                        <li><a href="https://web.archive.org/web/20190302024906/https://goanimate.com/video-maker-tips">Blog</a></li>
+                        <li><a href="https://web.archive.org/web/20190302024906/https://press.goanimate.com/">Press</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-sm-3">
+                <div class="site-footer-nav-col">
+                    <h5>GoAnimate Solutions</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="https://web.archive.org/web/20190302024906/https://goanimate4schools.com/" target="_blank">GoAnimate for Schools</a></li>
+                        <li class="hidden-xs">&nbsp;</li>
+                        <li class="hidden-xs">&nbsp;</li>
+                        <li class="hidden-xs">&nbsp;</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-sm-3">
+                <div class="site-footer-nav-col">
+                    <h5>Usage Guidelines</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="/web/20190302024906/https://goanimate4schools.com/termsofuse">Terms of Service</a></li>
+                        <li><a href="/web/20190302024906/https://goanimate4schools.com/privacy">Privacy Policy</a></li>
+                        <li class="hidden-xs">&nbsp;</li>
+                        <li class="hidden-xs">&nbsp;</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-sm-3">
+                <div class="site-footer-nav-col">
+                    <h5>Getting Help</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="https://web.archive.org/web/20190302024906/https://blog.goanimate4schools.com/">Educator Experiences</a></li>
+                        <li><a href="https://web.archive.org/web/20190302024906/https://goanimate4schools.zendesk.com/hc/en-us">Help Center</a></li>
+                        <li class="hidden-xs">&nbsp;</li>
+                        <li class="hidden-xs">&nbsp;</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <hr>
+
+        <div class="row site-footer-copyright">
+            <div class="col-sm-6">
+                <div class="site-footer-socials-container">
+                    Follow us on:
+                    <ul class="site-footer-socials clearfix">
+                        <li><a class="facebook" href="https://web.archive.org/web/20190302024906/https://www.facebook.com/GoAnimateInc">Facebook</a></li>
+                        <li><a class="twitter" href="https://web.archive.org/web/20190302024906/https://twitter.com/Go4Schools">Twitter</a></li>
+                        <li><a class="linkedin" href="https://web.archive.org/web/20190302024906/https://www.linkedin.com/company/goanimate">Linked In</a></li>
+                        <li><a class="gplus" href="https://web.archive.org/web/20190302024906/https://plus.google.com/+goanimate">Google+</a></li>
+                        <li><a class="youtube" href="https://web.archive.org/web/20190302024906/https://www.youtube.com/user/GoAnimate">YouTube</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="pull-right">
+                    <img src="https://web.archive.org/web/20190302024906im_/https://d2qrjeyl4jwu9j.cloudfront.net/static/e60e6efd1cf320eb/school/img/site/logo_amazon.png" alt="AWS Partner Network">
+                    &nbsp;&nbsp;&nbsp;
+                    GoAnimate © 2018
+                </div>
+            </div>
+        </div>
+
+    </div>
+</footer>
+
+
+<div id="studio_container" style="display: none;">
+    <div id="studio_holder"><!-- Full Screen Studio -->
+        <div style="top: 50%; position: relative;">
+            You can't use GoAnimate because Flash might be disabled. <a href="https://web.archive.org/web/20190302024906/https://get.adobe.com/flashplayer/">Enable Flash</a>.
+        </div>
+    </div>
+</div>
+
+
+
+<!--
+     FILE ARCHIVED ON 02:49:06 Mar 02, 2019 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 02:34:06 Apr 24, 2021.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->
+<!--
+playback timings (ms):
+  RedisCDXSource: 1.689
+  captures_list: 88.754
+  exclusion.robots.policy: 0.275
+  esindex: 0.011
+  PetaboxLoader3.datanode: 64.987 (4)
+  exclusion.robots: 0.285
+  LoadShardBlock: 64.428 (3)
+  PetaboxLoader3.resolve: 398.066
+  load_resource: 412.026
+  CDXLines.iter: 18.359 (3)
+--></body></html>
